@@ -1,0 +1,6 @@
+a=input()
+a=float(a)
+b=input()
+b=float(b)
+mul=float(a*b)
+print('%.2f' %mul)
