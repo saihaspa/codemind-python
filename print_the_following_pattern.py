@@ -1,10 +1,7 @@
-rows=int(input())
-k=0
-for i in range(1, rows+1):
-    for space in range(1,(rows-i)+1):
-        print(end=' ')
-    while k!=(2*i-1):
-        print(i,end='')
-        k+= 1
-    k=0
+n=int(input())
+#b=0
+for i in range(n,0,-1):
+    #b+=1
+    for j in range(1,i+1):
+        print(chr(64+i),end=' ')
     print()
