@@ -1,23 +1,20 @@
 def prime(n):
-    if(n==1):
-        return 0
     for i in range(2,int(n**0.5)+1):
-        if n%i==0:
+        if(n%i==0):
             return 0
     else:
         return 1
 n=int(input())
-rev=0
+temp=n
 if(prime(n)):
+    r=0
     while(n):
-        r=n%10
-        rev=rev*10+r
+        rem=n%10
+        r=r*10+rem
         n//=10
-    if(prime(rev)):
-        print('circular prime')
+    if(prime(r)):
+        print("circular prime")
     else:
         print('prime but not a circular prime')
 else:
     print('not prime')
-        
-        
