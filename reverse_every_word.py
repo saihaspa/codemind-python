@@ -1,10 +1,6 @@
-def reverseWordSentence(Sentence):
-    words = Sentence.split(" ")
-    newWords = [word[::-1] for word in words]
-    newSentence = " ".join(newWords)
-  
-    return newSentence
-  
-Sentence =input()
-
-print(reverseWordSentence(Sentence))
+s=input()
+r_s=[]
+for i in s.split():
+    r_s.append(i[::-1])
+sen=" ".join(r_s)
+print(sen)
