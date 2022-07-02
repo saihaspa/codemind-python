@@ -1,12 +1,8 @@
-def pangram(s):
-    alphastr='abcdefghijklmnopqrstuvwxyz'
-    for char in alphastr:
-        if char not in s.lower():
-            return False
-    else:
-        return True
 s=input()
-if(pangram(s)):
-    print('True')
+c="abcdefghijklmnopqrstuvwxyz"
+for i in c:
+    if i not in s.lower():
+       print('False')
+       break
 else:
-    print('False')
+    print('True')
