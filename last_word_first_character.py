@@ -1,4 +1,3 @@
-s=input()
-word=s.split()
-st=word[-1]
-print(st[0])
+string = input()
+t=string.split().pop(-1)
+print(t[0])
