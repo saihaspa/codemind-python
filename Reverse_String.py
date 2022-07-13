@@ -1,4 +1,6 @@
 s=input()
-for i in s:
-    s=s[::-1]
-print(s)
+st=s.split()[::-1]
+a=[]
+for i in st:
+    a.append(i)
+print(*a,end=' ')
