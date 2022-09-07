@@ -1,10 +1,9 @@
-def check(s1,s2):
-    if(sorted(s1)==sorted(s2)):
-        print("True")
+def check(s,s1):
+    if(s!=s1 and len(s)==len(s1)):
+        print('True')
     else:
-        print("False")        
+        print('False')
+        
+s=input()
 s1=input()
-s2=input()
-s1=s1.upper()
-s2=s2.upper()
-check(s1,s2)
+check(s,s1)
