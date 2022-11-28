@@ -1,7 +1,7 @@
-n=int(input())
-#b=0
-for i in range(n,0,-1):
-    #b+=1
-    for j in range(1,i+1):
-        print(chr(64+i),end=' ')
+a=int(input())
+for i in range(a):
+    for j in range(1,a-1):
+        print(j,end="")
+    for j in range(a-3,0,-1):
+        print(j,end="")
     print()
