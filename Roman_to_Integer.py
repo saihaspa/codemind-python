@@ -1,36 +1,36 @@
-def value(r):
-    if (r == 'I'):
-        return 1
-    if (r == 'V'):
-        return 5
-    if (r == 'X'):
-        return 10
-    if (r == 'L'):
-        return 50
-    if (r == 'C'):
-        return 100
-    if (r == 'D'):
-        return 500
-    if (r == 'M'):
-        return 1000
-    return -1
- 
-def romanToDecimal(str):
-    res = 0
-    i = 0
-    while (i < len(str)):
-        s1 = value(str[i])
-        if (i + 1 < len(str)):
-            s2 = value(str[i + 1])
-            if (s1 >= s2):
-                res = res + s1
-                i = i + 1
-            else:
-                res = res + s2 - s1
-                i = i + 2
-        else:
-            res = res + s1
-            i = i + 1
-    return res
 s=input()
-print(romanToDecimal(s))
+c=0
+for i in range(len(s)):
+    if s[i]=='I':
+        c+=1
+    elif s[i]=='V':
+        if(s[i-1]=='I' and i>0):
+            c+=3
+        else:
+            c+=5
+    elif(s[i]=='X'):
+        if(s[i-1]=='I' and i>0):
+            c+=8
+        else:
+            c+=10
+    elif(s[i]=='L'):
+        if(s[i-1]=='X' and i>0):
+            c+=30
+        else:
+            c+=50
+    elif(s[i]=='C'):
+        if(s[i-1]=='X' and i>0):
+            c+=80
+        else:
+            c+=100
+    elif(s[i]=='D'):
+        if(s[i-1]=='C' and i>0):
+            c+=300
+        else:
+            c+=500
+    elif(s[i]=='M'):
+        if(s[i-1]=='C' and i>0):
+            c+=800
+        else:
+            c+=1000
+print(c)
