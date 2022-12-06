@@ -1,0 +1,18 @@
+m=int(input())
+n=int(input())
+c=k=res=maxi=0
+while(m!=0):
+    r=m%n
+    m//=n
+    if(r==0):
+        k=1
+        c+=1
+        res=c
+    else:
+        if(res>maxi):
+            maxi=res
+        c=0
+if(k==0):
+    print('-1')
+else:
+    print(maxi)
